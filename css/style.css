@@ -1,0 +1,71 @@
+body{
+  background-image: url(../assets/bg.jpg);
+  background-size: cover;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+
+.container{
+  margin: 40px 100px;
+}
+
+.logo{
+  height: 2.5em;
+  width: auto;
+}
+
+.content{
+  margin: 5em 0;
+}
+
+.title{
+  font-family: 'Outfit', sans-serif;
+  font-size: 60px;
+  width: 400px;
+  line-height: 0.8em;
+  margin-bottom: 0.7em;
+}
+
+.bold{
+  font-weight:800;
+}
+
+.subtitle{
+  color: #D20094;
+  font-family: 'Outfit', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.paragraph{
+  padding: 0.6em 0;
+  margin: 0;
+  width: 35em;
+}
+
+.list{
+  padding-left: 1.5em;
+  margin-top: 2.5em;
+}
+
+.sublist{
+  padding: 0.2em;
+}
+
+.btn{
+  background-color: #00ffff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 30px;
+  padding: 0.5em 2em;
+}
+
+.btn:active,
+.btn:hover {
+  box-shadow: 0 0 20px 1px #00ffff;
+}
