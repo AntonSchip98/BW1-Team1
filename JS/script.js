@@ -6,7 +6,7 @@ function timer(){
        document.querySelector("#timer1").innerHTML = seconds;
        if(seconds === 0)
        clearTimeout(interval)
-    }, 100)
+    }, 1000)
 }
 timer()
 
