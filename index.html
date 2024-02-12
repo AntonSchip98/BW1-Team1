@@ -3,26 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/reset.css" />
     <title>Document</title>
-    <style> 
-     #timerContainer{
-      text-align: center;
-      margin: 100px auto;
-     }
-    
-    
+    <style>
+      .timerContainer {
+        text-align: center;
+        margin: 100px auto;
+      }
+      .base-timer {
+        position: relative;
+        height: 300px;
+        width: 300px;
+      }
+      /* Removes SVG styling that would hide the time label */
+      .base-timer__circle {
+        fill: none;
+        stroke: none;
+      }
+
+      /* The SVG path that displays the timer's progress */
+      .base-timer__path-elapsed {
+        stroke-width: 7px;
+        stroke: grey;
+      }
+      .base-timer__label {
+        position: absolute;
+
+        /* Size should match the parent container */
+        width: 300px;
+        height: 300px;
+
+        /* Keep the label aligned to the top */
+        top: 0;
+
+        /* Create a flexible box that centers content vertically and horizontally */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* Sort of an arbitrary number; adjust to your liking */
+        font-size: 48px;
+      }
     </style>
   </head>
   <body>
     <h1>ciao</h1>
-    <div id="timerContainer">
-      <p>seconds</p>
-      <div id="timer1"></div>
-      <p>remaining</p>
+    <div class="base-timer timerContainer">
+      <svg
+        class="base-timer__svg"
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g class="base-timer__circle">
+          <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+        </g>
+      </svg>
+      <span class="timerContainer">
+        <p>seconds</p>
+        <div id="timer1"></div>
+        <p>remaining</p>
+      </span>
     </div>
-    <script src="./JS/script.js">
-
-    </script>
+    <script src="./JS/script.js"></script>
   </body>
 </html>
