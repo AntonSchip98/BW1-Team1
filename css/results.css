@@ -10,13 +10,11 @@ body{
   }
   
   .container{
-    margin: 40px 100px;
+    margin: 40px 250px;
   }
 
 /************************ LOGO ************************/ 
-.container{
-    margin: 40px 100px;
-  }
+
   
   .logo{
     height: 2.5em;
@@ -24,8 +22,8 @@ body{
   }
 
   .logo img {
-    width: 150px;
-    height: 30px;
+    width: 250px;
+    height: 60px;
   }
 /************************ TITLE ************************/ 
  
@@ -37,13 +35,14 @@ body{
 
   #title h2{
     
-    font-size: 2.4rem;
-    font-weight:800;
+    font-size: 4rem;
+    font-weight:700;
   }
 
 
   #title h3{
-    font-size: 1.2rem;
+    margin: 0.7rem;
+    font-size: 1.8rem;
   }
   
 /************************ MAIN ************************/ 
@@ -58,14 +57,12 @@ body{
 
 /************************ CORRECT/WRONG ************************/ 
 
-
-
-
 .container-correct{
     display: flex;
     flex-direction: row;
     justify-content: right;
     align-items: center;
+    margin-right: 4rem;
 
 }
 
@@ -75,7 +72,7 @@ body{
     flex-direction: row;
     justify-content: left;
     align-items: center;
-
+    margin-left: 4rem;
 }
 
 .item-correct-text{
@@ -90,18 +87,20 @@ body{
 
 
 .item-correct-text h3, .item-wrong-text h3{
- font-size: 2.5rem;   
+ font-size: 4rem;  
+
 }
 
 
 .item-correct-text h4, .item-wrong-text h4{
-    font-size: 2.3rem;   
-    font-weight:950;
+    font-size: 4rem;   
+    font-weight:600;
+    font-family: "Rubik", sans-serif;
    }
 
 
 .item-correct-text p, .item-wrong-text p{
-    font-size: 0.9rem;   
+    font-size: 1.3rem;   
 }
 
 /************************ CIRCLE ************************/ 
@@ -110,55 +109,55 @@ body{
 .item-circle{
 
     text-align: center; 
-    padding:0.8rem;
+ 
 }
 
 .container-text{
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    margin: 0 auto;
-    border: 30px solid #00ffff;
-    border-radius: 100%;
-    
-    height: 180px;
-    width: 180px;
+  margin: 0 auto;
+  border: 50px solid #00ffff;
+  border-radius: 100%;
+  
+  height: 300px;
+  width: 300px;
 
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(17, 17, 26, 0.4) 0px 8px 24px, rgba(17, 17, 26, 0.4) 0px 16px 56px, rgba(17, 17, 26, 0.4) 0px 24px 80px;
 }
 
 .item-circle h6{
-    font-size: 0.8rem;
-    font-weight: bold;
-   }
+font-size: 1rem;
+font-weight: bold;
+padding-top: 1rem;
+}
 
 
 .item-circle h5{
  color: #00ffff;
- font-size: 0.8rem;
+ font-size: 1rem;
  font-weight: bold;
 }
 
 
 
 .item-circle p{
-   margin-top: 1.2rem;
-   font-size: 0.7rem;
-   padding: 0.5rem;
+   font-size: 1rem;
+   padding: 2rem;
 }
 
 /************************ BTN ************************/ 
 
 #btn{
-    margin-top: 2rem;
+    margin-top: 3.5rem;
     text-align: center;
 
 }
 
 #btn button{
-    padding: 1rem 3.2rem;
+    padding: 1rem 4rem;
 
     font-size: 1.5rem;
     font-weight: bold;
