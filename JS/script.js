@@ -5,12 +5,15 @@ const timerDiv = () => {
   outer.classList.add("outer");
   const inner = document.createElement("div");
   inner.classList.add("inner");
-  const number = document.createElement("div");
+  const number = document.createElement("p");
   number.classList.add("number");
   number.innerText = 60;
   // creazion svg
   const divSvg = document.querySelector(".svg");
-
+  const secondi = document.createElement("p").innerText = "Secondi"
+  const rimanenti = document.createElement("p").innerText = "Rimanenti"
+  
+ 
   // michele ci dispiace :(
   const svg = `<svg
   class="svgTimer"
@@ -46,7 +49,9 @@ const timerDiv = () => {
 
   timer.append(outer);
   outer.append(inner);
+  inner.append(secondi)
   inner.append(number);
+  inner.append(rimanenti)
 
   console.dir(timer);
 };
