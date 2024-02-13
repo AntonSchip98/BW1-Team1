@@ -1,0 +1,106 @@
+body{
+  background-image: url(../assets/bg.jpg);
+  background-size: cover;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+
+.container{
+  margin: 40px 100px;
+}
+
+.logo{
+  height: 4em;
+  width: auto;
+}
+
+.content{
+  margin: 5em 0;
+}
+
+.title{
+  font-family: 'Outfit', sans-serif;
+  font-size: 60px;
+  line-height: 0.8em;
+  margin-bottom: 0.7em;
+}
+
+.bold{
+  font-weight:800;
+}
+
+.subtitle{
+  color: #D20094;
+  font-family: 'Outfit', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.paragraph{
+  padding: 0.6em 0;
+  margin: 0;
+}
+
+.list{
+  padding-left: 1.5em;
+  margin-top: 2.5em;
+}
+
+.sublist{
+  padding: 0.2em;
+}
+
+.btn{
+  background-color: #00ffff;
+  border: none;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 30px;
+  padding: 0.5em 2em;
+}
+
+.btn:active,
+.btn:hover {
+  box-shadow: 0 0 20px 1px #00ffff;
+}
+
+.content {
+  text-align: center;
+}
+
+.feedbackp{
+  font-family: 'Outfit', sans-serif;
+  font-size: 30px;
+  margin-left: 240px;
+  margin-right: 240px;
+  padding-right: 150px;
+  padding-left: 150px;
+}
+
+.rates{
+  margin-top: 1em;
+}
+
+.comment-box {
+  margin-top: 5em;
+}
+
+.comment{
+  margin-bottom: 2.5em;
+}
+
+.text-comment{
+  background-color: transparent;
+  padding-bottom: 0.8em;
+  border: none;
+  border-bottom: 2px solid #d20094;
+  margin-bottom: 5em;
+  width: 800px;
+  padding-left: 40px;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+}

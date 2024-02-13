@@ -5,34 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/feedback.css">
   </head>
   <body>
     <div class="container">
-      <div class="logo">
-        <img src="../asset/epicode_logo.png" />
+      <div class="container-logo">
+        <img class="logo" src="./assets/epicode_logo.png" alt="logo"/>
       </div>
-      <div class="titolo">
-        <h2>Tell us show it's going</h2>
-        <p>From 0 to 10, how likely are you to recommend EPICODE to a friend or a colleague</p>
+      <div class="content">
+        <h2 class="title bold">Tell us show it's going</h2>
+        <p class="paragraph feedbackp">From 0 to 10, how likely are you to recommend EPICODE to a friend or a colleague?</p>
+      
+        <div class="rates">
+          <img src="./assets/star.svg" alt="star" />
+          <img src="./assets/star.svg" alt="star" />
+          <img src="./assets/star.svg" alt="star" />
+          <img src="./assets/star.svg" alt="star" />
+          <img src="./assets/star.svg" alt="star" />
+          <img src="./assets/star.svg" alt="star" />
+          <img src="./assets/star.svg" alt="star" />
+          <img src="./assets/star.svg" alt="star" />
+          <img src="./assets/star.svg" alt="star" />
+          <img src="./assets/star.svg" alt="star" />
+        </div>
+        <div class="comment-box">
+          <p class="comment feedbackp">Leave us an open feeedback about your experience so far </p>
+          <input class="text-comment" type="text" placeholder="Write yuor comment here" />
+        </div>
+        <button class="btn">More info</button>
       </div>
-      <div class="voto">
-        <img src="../asset/star.svg" alt="" />
-        <img src="../asset/star.svg" alt="" />
-        <img src="../asset/star.svg" alt="" />
-        <img src="../asset/star.svg" alt="" />
-        <img src="../asset/star.svg" alt="" />
-        <img src="../asset/star.svg" alt="" />
-        <img src="../asset/star.svg" alt="" />
-        <img src="../asset/star.svg" alt="" />
-        <img src="../asset/star.svg" alt="" />
-        <img src="../asset/star.svg" alt="" />
-      </div>
-      <div class="commento">
-        <p>Leave us an open feeedback about your experience so far </p>
-        <input type="text" placeholder="write yuor feedback here" />
-      </div>
-      <button class="bottone">More info</button>
+      
     </div>
   </body>
 </html>
