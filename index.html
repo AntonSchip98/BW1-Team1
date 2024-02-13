@@ -5,73 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./CSS/reset.css" />
     <title>Document</title>
-    <style>
-      /* altezza container */
-      .base-timer {
-        margin: 0 auto;
-        position: relative;
-        height: 300px;
-        width: 300px;
-      }
-      /* rimuove gli sitli dal cerchio */
-      .base-timer__circle {
-        fill: none;
-        stroke: none;
-      }
-      /*  mi da il cerchio griggio*/
-      .base-timer__path-elapsed {
-        stroke-width: 7px;
-        stroke: grey;
-      }
-
-      .base-timer__label {
-        position: absolute;
-
-        /* Size should match the parent container */
-        width: 300px;
-        height: 300px;
-
-        /* mi fissa il timer con i p all interno */
-        top: 0;
-
-        /* Create a flexible box that centers content vertically and horizontally */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        /* Sort of an arbitrary number; adjust to your liking */
-        font-size: 30px;
-      }
-      .above {
-        margin-bottom: 10px; /* Distanza tra il paragrafo sopra e il div */
-      }
-      .below {
-        margin-top: 10px; /* Distanza tra il paragrafo sotto e il div */
-      }
-    </style>
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
-    <div>
-      <div class="base-timer">
-        <!-- codice per il cerchio grigio -->
-        <svg
-          class="base-timer__svg"
-          viewBox="0 0 100 100"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g class="base-timer__circle">
-            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
-          </g>
-        </svg>
-        <!-- interno del cerchio -->
-        <span id="base-timer-label" class="base-timer__label">
-          <p class="above">seconds</p>
-          <div id="timer1">60</div>
-          <p class="below">reamaining</p>
-        </span>
-      </div>
+    <div class="timerContainer">
+      <div class="timer"><div class="svg"></div></div>
     </div>
 
     <script src="./JS/script.js"></script>
