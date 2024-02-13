@@ -1,71 +1,68 @@
-body{
-  background-image: url(../assets/bg.jpg);
-  background-size: cover;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  color: #fff;
-}
-
-.container{
-  margin: 40px 100px;
-}
-
-.logo{
-  height: 2.5em;
-  width: auto;
-}
-
-.content{
-  margin: 5em 0;
-}
-
-.title{
-  font-family: 'Outfit', sans-serif;
-  font-size: 60px;
-  width: 400px;
-  line-height: 0.8em;
-  margin-bottom: 0.7em;
-}
-
-.bold{
-  font-weight:800;
-}
-
-.subtitle{
-  color: #D20094;
-  font-family: 'Outfit', sans-serif;
-  font-size: 30px;
-  font-weight: 700;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.paragraph{
-  padding: 0.6em 0;
-  margin: 0;
-  width: 35em;
+.timerContainer {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.timer {
+  width: 160px;
+  height: 160px;
+  /* background: cornflowerblue; */
+  position: relative;
 }
 
-.list{
-  padding-left: 1.5em;
-  margin-top: 2.5em;
+.outer {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
-
-.sublist{
-  padding: 0.2em;
+.inner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  /* centrare il timer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px -0px rgba(255, 255, 255, 1), 0.5px 0.5px 0 rgba(0, 0, 0, 0.15),
+    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.btn{
-  background-color: #00ffff;
-  border: none;
-  cursor: pointer;
-  font-family: 'Outfit', sans-serif;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 30px;
-  padding: 0.5em 2em;
+.number {
+  font-size: 40px;
+  font-weight: 600px;
+  color: #555;
 }
-
-.btn:active,
-.btn:hover {
-  box-shadow: 0 0 20px 1px #00ffff;
+.circleTimer {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  animation: anim 65s linear forwards;
+}
+.svgTimer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
