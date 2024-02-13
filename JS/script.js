@@ -1,3 +1,5 @@
+const timer = document.querySelector('.timerContainer')
+
 const timerDiv = () => {
   const timer = document.querySelector(".timer");
   timer.classList.add("timer");
@@ -11,6 +13,7 @@ const timerDiv = () => {
   // creazion svg
   const divSvg = document.querySelector(".svg");
   const secondi = document.createElement("p").innerText = "Secondi"
+  
   const rimanenti = document.createElement("p").innerText = "Rimanenti"
   
  
@@ -24,7 +27,7 @@ const timerDiv = () => {
 >
   <defs>
     <linearGradient id="GradientColor">
-      <stop offset="0%" stop-color="#e91e63" />
+      <stop offset="0%" stop-color="red" />
       <stop offset="100%" stop-color="#673ab7" />
     </linearGradient>
   </defs>
@@ -52,7 +55,8 @@ const timerDiv = () => {
   inner.append(secondi)
   inner.append(number);
   inner.append(rimanenti)
-
+  secondi.classList.add("prova")
   console.dir(timer);
 };
 timerDiv();
+timer.document.append(timerDiv)
