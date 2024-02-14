@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    margin: 40px 100px;
+    margin: 40px 200px;
     font-family: "Inter", sans-serif;
 }
 
@@ -15,11 +15,11 @@ body {
     width: auto;
 }
 
-.content {
+.contentWelcome {
     margin: 5em 0;
 }
 
-.title {
+.titleWelcome {
     font-family: "Outfit", sans-serif;
     font-size: 60px;
     width: 400px;
@@ -394,6 +394,7 @@ body {
     border: 3px solid #fff;
     background-color: transparent;   
     color:#fff;
+    cursor: pointer;
 }
 
 .btnResult button:hover {
@@ -401,3 +402,58 @@ body {
 }
 
 /*----RESULT TERMINATO-----*/
+
+.content{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title-bold{
+    text-align: center;
+    margin-bottom: 0.6em;
+    margin-top: 2em;
+}
+
+.paragraph-feedbackp{
+    text-align: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 30px;
+}
+
+.feedbackp{
+    font-family: 'Outfit', sans-serif;
+    margin: 0 auto;
+    font-size: 30px;
+}
+
+.star{
+    padding-left: 0.8em;
+    cursor: pointer;
+}
+
+.rates{
+    margin-top: 2em;
+}
+
+.comment-box {
+    margin-top: 5em;
+}
+
+.comment{
+    margin-bottom: 2.5em;
+}
+
+.text-comment{
+    background-color: transparent;
+    padding-bottom: 0.8em;
+    border: none;
+    border-bottom: 2px solid #d20094;
+    margin-bottom: 5em;
+    width: 800px;
+    padding-left: 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    outline: none;
+    color: white;
+}
+
