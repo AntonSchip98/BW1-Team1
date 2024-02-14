@@ -57,7 +57,7 @@
 .circleTimer {
   fill: none;
   stroke: #00ffff;
-  stroke-width: 20px;
+  stroke-width: 17px;
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
   animation: anim 65s linear forwards;
