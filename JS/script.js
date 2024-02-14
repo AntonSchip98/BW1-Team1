@@ -1,4 +1,4 @@
-const timer = document.querySelector('.timerContainer')
+const timer = document.querySelector(".timerContainer");
 
 const timerDiv = () => {
   const timer = document.querySelector(".timer");
@@ -12,11 +12,10 @@ const timerDiv = () => {
   number.innerText = 60;
   // creazion svg
   const divSvg = document.querySelector(".svg");
-  const secondi = document.createElement("p").innerText = "Secondi"
-  
-  const rimanenti = document.createElement("p").innerText = "Rimanenti"
-  
- 
+  const secondi = (document.createElement("p").innerText = "Secondi");
+
+  const rimanenti = (document.createElement("p").innerText = "Rimanenti");
+
   // michele ci dispiace :(
   const svg = `<svg
   class="svgTimer"
@@ -31,6 +30,7 @@ const timerDiv = () => {
       <stop offset="100%" stop-color="#673ab7" />
     </linearGradient>
   </defs>
+  <circle class="circleTimer2" cx="80" cy="80" r="70" stroke-linecap="round" />
   <circle class="circleTimer" cx="80" cy="80" r="70" stroke-linecap="round" />
 </svg>`;
   divSvg.innerHTML = svg;
@@ -52,11 +52,11 @@ const timerDiv = () => {
 
   timer.append(outer);
   outer.append(inner);
-  inner.append(secondi)
+  inner.append(secondi);
   inner.append(number);
-  inner.append(rimanenti)
-  secondi.classList.add("prova")
+  inner.append(rimanenti);
+  secondi.classList.add("prova");
   console.dir(timer);
 };
 timerDiv();
-timer.document.append(timerDiv)
+timer.document.append(timerDiv);

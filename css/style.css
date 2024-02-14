@@ -7,15 +7,12 @@
 /* TIMER CSS */
 .timerContainer {
   position: relative;
-  
   display: flex;
-  
   justify-content: end;
 }
 .timer {
   width: 160px;
   height: 160px;
-  /* background: cornflowerblue; */
   position: relative;
 }
 
@@ -24,7 +21,7 @@
   width: 160px;
   border-radius: 50%;
   padding: 20px;
-  box-shadow: 0px 0px 30px 4px rgba(32, 27, 27, 0.4), 0px 0px 30px 4px rgba(32, 27, 27, 0.4);
+  box-shadow: 0px 0px 30px 4px rgba(32, 27, 27, 0.4);
 }
 .inner {
   height: 120px;
@@ -34,20 +31,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0px 0px 30px 4px rgba(32, 27, 27, 0.4), inset 0px 0px 30px 4px rgba(32, 27, 27, 0.4), 0px 0px 30px 4px rgba(32, 27, 27, 0.4), 0.5px 0.5px 0 rgba(0, 0, 0, 0.15), 0px 0px 30px 4px rgba(32, 27, 27, 0.4);
-  display: flex;
+  box-shadow: inset 0px 0px 30px 4px rgba(32, 27, 27, 0.4),
+    0.5px 0.5px 0 rgba(0, 0, 0, 0.15);
+  /* centrare i p ed il timer in verticale */
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-transform: uppercase;
-  
+  /* --------------------- */
   font-size: 12px;
   font-weight: 500;
 }
 
-.inner > p{
-  font-family:"Outfit", sans-serif ;
-  
+.inner > p {
+  font-family: "Outfit", sans-serif;
 }
 .number {
   font-size: 40px;
@@ -61,6 +56,13 @@
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
   animation: anim 65s linear forwards;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+.circleTimer2 {
+  fill: none;
+  stroke: grey;
+  stroke-width: 17px;
 }
 .svgTimer {
   position: absolute;
