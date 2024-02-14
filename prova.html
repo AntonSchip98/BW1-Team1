@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test con pagine diverse</title>
+  <style>
+    #container {
+      width: 400px;
+      height: 300px;
+      border: 1px solid black;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .page {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="page1" class="page">
+      <!-- Contenuto pagina 1 -->
+      <h1>Pagina 1</h1>
+      <p>Contenuto pagina 1</p>
+    </div>
+    <div id="page2" class="page">
+      <!-- Contenuto pagina 2 -->
+      <h1>Pagina 2</h1>
+      <p>Contenuto pagina 2</p>
+    </div>
+    <div id="page3" class="page">
+      <!-- Contenuto pagina 3 -->
+      <h1>Pagina 3</h1>
+      <p>Contenuto pagina 3</p>
+    </div>
+    <div id="page4" class="page">
+      <!-- Contenuto pagina 4 -->
+      <h1>Pagina 4</h1>
+      <p>Contenuto pagina 4</p>
+    </div>
+    <button id="nextButton">Avanti</button>
+  </div>
+
+  <script src="./JS/prova.js"></script>
+</body>
+</html>
