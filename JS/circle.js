@@ -1,6 +1,8 @@
 
-let risposteGiuste=8;
-let risposteSbagliate = 2;
+let risposteGiuste=5;
+let risposteSbagliate = 5;
+
+let risposteTotale = 10;
 
 
 var ctx = document.getElementById("myChart");
@@ -12,23 +14,71 @@ var myChart = new Chart(ctx, {
       label: '# of Tomatoes',
       data: [risposteGiuste, risposteSbagliate,],
       backgroundColor: [
-        '#00ffff',
         '#d20094',
+        '#00ffff',
+        
         
       ],
       borderColor: [
-        '#00ffff',
         '#d20094',
+        '#00ffff',
+        
        
       ],
       
     }]
   },
   options: {
-    //cutoutPercentage: 40,
-    responsive: false,
-    cutout:130,
-    boxShadow: '0px 0px 30px 4px rgba(32, 27, 27, 0.4);'
+    
+    
+    cutout:125,
+    
+    plugins: {
+      tooltip: {
+        enabled: false
+      },
+      legend: {
+        onHover: function() {}
+      }
+    }
+  
   }
 });
- 
+
+
+
+
+
+
+/*********************calcolo risposte giuste ***********************/
+let posizioneCorette = document.getElementById('statistics-correct')
+let percentualeGiuste = risposteGiuste*100/10
+
+posizioneCorette.append(percentualeGiuste + '%' )
+
+/*********************calcolo risposte sbagliate ***********************/
+let posizioneSbagliate = document.getElementById('statistics-wrong')
+let percentualeSbagliate = risposteSbagliate*100/10
+
+posizioneSbagliate.append(percentualeSbagliate + '%' )
+
+
+
+/*********************quota risposte giuste ***********************/
+
+
+let quotaCorette = document.getElementById('number-question-correct')
+
+
+quotaCorette.append(risposteGiuste + '/' + risposteTotale + 'questions' )
+
+
+/*********************quota risposte sbagliate ***********************/
+
+
+let quotaSbagliate = document.getElementById('number-question-wrong')
+
+
+quotaSbagliate.append(risposteSbagliate + '/' + risposteTotale + 'questions' )
+
+

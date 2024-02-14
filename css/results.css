@@ -99,7 +99,7 @@ body{
    }
 
 
-.item-correct-text p, .item-wrong-text p{
+.item-correct-text #number-question-correct, .item-wrong-text #number-question-wrong{
     font-size: 1.3rem;   
 }
 
@@ -108,7 +108,12 @@ body{
 
 .item-circle{
 
-    text-align: center; 
+  text-align: center; 
+
+  border-radius: 100%;
+
+  
+  
  
 }
 
@@ -126,6 +131,7 @@ body{
   width: 300px;
 
   box-shadow: rgba(17, 17, 26, 0.4) 0px 8px 24px, rgba(17, 17, 26, 0.4) 0px 16px 56px, rgba(17, 17, 26, 0.4) 0px 24px 80px;
+
 }
 
 .item-circle h6{
@@ -145,7 +151,7 @@ padding-top: 1rem;
 
 .item-circle p{
    font-size: 1rem;
-   padding: 2rem;
+   padding: 1.5rem 0.5rem;
 }
 
 /************************ BTN ************************/ 
@@ -183,14 +189,14 @@ padding-top: 1rem;
   .container-circle{
     display: flex;
     justify-content: center;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
   }
 
   .item-circle{
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
   }
 
   .text-circle{
@@ -200,4 +206,11 @@ padding-top: 1rem;
     transform: translate(-50%, -40%);
     display: flex;
     flex-direction: column;
+
+    
+  }
+
+
+  #myChart {
+    box-shadow: 0px 0px 30px 4px rgba(225, 0, 0, 1);
   }
