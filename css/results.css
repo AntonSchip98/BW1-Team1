@@ -173,3 +173,9 @@ padding-top: 1rem;
 #btn button:hover {
     box-shadow: rgba(170, 160, 192, 0.2) 0px 7px 29px 0px;
   }
+
+
+
+  #myChart{
+    position: absolute;
+  }
