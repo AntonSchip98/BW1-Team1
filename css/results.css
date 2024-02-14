@@ -51,7 +51,7 @@ body{
 #main{
     margin-top: 3rem;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: 2fr 1fr 2fr;
 
 }
 
@@ -176,6 +176,28 @@ padding-top: 1rem;
 
 
 
-  #myChart{
+  
+
+  /* CIRCLE */
+
+  .container-circle{
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+  }
+
+  .item-circle{
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+
+  .text-circle{
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    display: flex;
+    flex-direction: column;
   }
