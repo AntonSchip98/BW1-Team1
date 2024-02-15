@@ -7,15 +7,12 @@
 /* TIMER CSS */
 .timerContainer {
   position: relative;
-  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-content: end;
 }
 .timer {
   width: 160px;
   height: 160px;
-  /* background: cornflowerblue; */
   position: relative;
 }
 
@@ -24,8 +21,7 @@
   width: 160px;
   border-radius: 50%;
   padding: 20px;
-  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 30px 4px rgba(32, 27, 27, 0.4);
 }
 .inner {
   height: 120px;
@@ -35,27 +31,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
-    -0.5px -0.5px -0px rgba(255, 255, 255, 1), 0.5px 0.5px 0 rgba(0, 0, 0, 0.15),
-    0px 12px 10px -10px rgba(0, 0, 0, 0.05);
-  display: flex;
+  box-shadow: inset 0px 0px 30px 4px rgba(32, 27, 27, 0.4),
+    0.5px 0.5px 0 rgba(0, 0, 0, 0.15);
+  /* centrare i p ed il timer in verticale */
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-transform: uppercase;
+  /* --------------------- */
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.inner > p {
+  font-family: "Outfit", sans-serif;
 }
 .number {
   font-size: 40px;
   font-weight: 600px;
-  color: #555;
+  color: white;
 }
 .circleTimer {
   fill: none;
   stroke: #00ffff;
-  stroke-width: 20px;
+  stroke-width: 17px;
   stroke-dasharray: 472;
   stroke-dashoffset: 472;
   animation: anim 65s linear forwards;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+.circleTimer2 {
+  fill: none;
+  stroke: grey;
+  stroke-width: 17px;
 }
 .svgTimer {
   position: absolute;
@@ -93,7 +100,7 @@ body {
 .title {
   font-family: "Outfit", sans-serif;
   font-size: 60px;
-  width: 400px;
+  /*width: 400px;*/
   line-height: 0.8em;
   margin-bottom: 0.7em;
 }
@@ -140,3 +147,6 @@ body {
 .btn:hover {
   box-shadow: 0 0 20px 1px #00ffff;
 }
+/*background-color: gray;*/
+
+/*background-color: rebeccapurple;*/
