@@ -1,4 +1,3 @@
-
 let templateIndex = 1;
 const templateContainer = document.querySelector("#template-container");
 
@@ -10,12 +9,14 @@ function showTemplate(templateIndex) {
   templateContainer.innerHTML = "";
 
   // Otteniamo il contenuto del template corrente.
-  const templateContent = document
-    .querySelector(`#template${templateIndex}`)
-    .content.cloneNode(true);
+  const templateContent = document.querySelector(`#template${templateIndex}`).content.cloneNode(true);
 
   // Aggiungiamo il contenuto del template al container.
   templateContainer.append(templateContent);
+
+  if (templateIndex === 2) {
+    timerDiv();
+  }
 
   // Selezioniamo i bottoni dopo aver aggiunto il template al container.
   const switchButtons = document.querySelectorAll(".switchButton");
@@ -26,16 +27,16 @@ function showTemplate(templateIndex) {
 }
 
 function switchTemplate() {
-   // templateIndex = templateIndex === 3 ? 1 : templateIndex + 1;
-   if(templateIndex === 1 && !document.querySelector('#templateCheckbox').checked){
-        alert('clicca')
-        return 
-   } 
+  // templateIndex = templateIndex === 3 ? 1 : templateIndex + 1;
+  if (templateIndex === 1 && !document.querySelector("#templateCheckbox").checked) {
+    alert("clicca");
+    return;
+  }
   if (templateIndex != 3) {
     templateIndex++;
-}
-//   inserire la funzione per far partire i quiz
-showTemplate(templateIndex);
+  }
+  //   inserire la funzione per far partire i quiz
+  showTemplate(templateIndex);
 
   // Mostriamo il nuovo template.
 }

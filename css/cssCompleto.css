@@ -206,15 +206,26 @@ body {
     box-sizing: border-box;
 }
 
-.outer {
+/* TIMER CSS */
+.timerContainer {
+    position: relative;
+    display: flex;
+    justify-content: end;
+  }
+  .timer {
+    width: 160px;
+    height: 160px;
+    position: relative;
+  }
+  
+  .outer {
     height: 160px;
     width: 160px;
     border-radius: 50%;
     padding: 20px;
-    box-shadow: 0px 0px 30px 4px rgba(32, 27, 27, 0.4), 0px 0px 30px 4px rgba(32, 27, 27, 0.4);
-}
-
-.inner {
+    box-shadow: 0px 0px 30px 4px rgba(32, 27, 27, 0.4);
+  }
+  .inner {
     height: 120px;
     width: 120px;
     border-radius: 50%;
@@ -222,56 +233,49 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0px 0px 30px 4px rgba(32, 27, 27, 0.4), inset 0px 0px 30px 4px rgba(32, 27, 27, 0.4), 0px 0px 30px 4px rgba(32, 27, 27, 0.4), 0.5px 0.5px 0 rgba(0, 0, 0, 0.15), 0px 0px 30px 4px rgba(32, 27, 27, 0.4);
-    display: flex;
+    box-shadow: inset 0px 0px 30px 4px rgba(32, 27, 27, 0.4),
+      0.5px 0.5px 0 rgba(0, 0, 0, 0.15);
+    /* centrare i p ed il timer in verticale */
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;  
+    text-transform: uppercase;
+    /* --------------------- */
     font-size: 12px;
     font-weight: 500;
-}
-
-.inner > p{
-    font-family:"Outfit", sans-serif ;
-}
-
-.number {
+  }
+  
+  .inner > p {
+    font-family: "Outfit", sans-serif;
+  }
+  .number {
     font-size: 40px;
     font-weight: 600px;
     color: white;
-}
-
-.circleTimer {
+  }
+  .circleTimer {
     fill: none;
     stroke: #00ffff;
     stroke-width: 17px;
     stroke-dasharray: 472;
     stroke-dashoffset: 472;
     animation: anim 65s linear forwards;
-}
-
-.svgTimer {
+    transform-origin: center;
+    transform: rotate(-90deg);
+  }
+  .circleTimer2 {
+    fill: none;
+    stroke: grey;
+    stroke-width: 17px;
+  }
+  .svgTimer {
     position: absolute;
     top: 0;
     left: 0;
-}
-@keyframes anim {
+  }
+  @keyframes anim {
     100% {
-    stroke-dashoffset: 0;
+      stroke-dashoffset: 0;
     }
-}
-
-.timerContainer {
-    position: relative;
-    display: flex; 
-    justify-content: end;
-}
-.timer {
-    width: 160px;
-    height: 160px;
-    position: relative;
-}
+  }
 
 /*TIMER COMPLETE*/
 
