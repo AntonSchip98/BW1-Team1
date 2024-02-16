@@ -74,6 +74,7 @@ body {
 .checkbox {
   margin-top: 5em;
   display: flex;
+  margin-left: 13px;
 }
 
 .bottone {
@@ -84,13 +85,17 @@ body {
 .checkbox-wrapper {
   display: block;
   position: relative;
-  padding-left: 35px;
+  padding-left: 25px;
+  padding-top: 9px;
   margin-bottom: 12px;
-  margin-top: 11px;
+  margin-top: 10px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 16px;
   user-select: none;
+  
+  
 }
+
 
 .checkbox-wrapper input {
   position: absolute;
@@ -132,10 +137,7 @@ body {
   display: block;
 }
 
-.visto {
-  margin-left: 3px;
-  margin-top: 10px;
-}
+
 #templateCheckbox {
   visibility: hidden;
 }
@@ -196,7 +198,8 @@ body {
   }
 }
 
-.buttonBenchmark:active {
+.buttonBenchmark:active, 
+.buttonBenchmark:hover {
   background: linear-gradient(180deg, #d20094, rgb(26, 26, 26));
 }
 
