@@ -94,18 +94,16 @@ const questions = [
   },
 ];
 
-// grafico
 // Variabili globali
 let templateIndex = 1;
 const templateContainer = document.querySelector("#template-container");
 const questionContainer = document.getElementById("question-container");
 const answerButtons = document.getElementById("answer-buttons");
-
 let domandeGiuste = 0;
 let domandeSbaglaite = 0;
-// Funzioni
-let seconds = 61; // Spostiamo questa variabile all'interno della funzione
-// Funzione per mostrare il template
+let seconds = 61;
+
+// FUNZIONE PER I TEMPLATE
 function showTemplate(templateIndex) {
   // Rimuoviamo il contenuto precedente del container.
   templateContainer.innerHTML = "";
@@ -119,10 +117,7 @@ function showTemplate(templateIndex) {
   templateContainer.append(templateContent);
 
   if (templateIndex === 2) {
-    // timer
-    const timer = document.querySelector(".timerContainer");
     timerDiv();
-    // quiz
     startQuiz();
   }
   if (templateIndex === 3) {
@@ -134,15 +129,14 @@ function showTemplate(templateIndex) {
   }
   // Selezioniamo i bottoni dopo aver aggiunto il template al container.
   const switchButtons = document.querySelectorAll(".switchButton");
-  // Aggiungiamo un event listener per l'evento "click" a ciascun pulsante.
+  // Aggiungiamo un event listener per l'evento a tuttii button.
   switchButtons.forEach((el) => {
     el.addEventListener("click", switchTemplate);
   });
 }
 
-// Funzione per passare al template successivo
+// FUNZIONE PER PASSARE AL TEMPLATE SUCCESSIVO CHE ANDRA' COLLEGATA ALL EVENTO DEI BOTTONI
 function switchTemplate() {
-  // templateIndex = templateIndex === 3 ? 1 : templateIndex + 1;
   if (
     templateIndex === 1 &&
     !document.querySelector("#templateCheckbox").checked
@@ -155,11 +149,9 @@ function switchTemplate() {
   }
   //   inserire la funzione per far partire i quiz
   showTemplate(templateIndex);
-
-  // Mostriamo il nuovo template.
 }
 
-// Funzione per mostrare il timer
+// FUNZIONE TIMER
 function timerDiv() {
   const timer = document.querySelector(".timer");
   timer.classList.add("timer");
@@ -169,7 +161,6 @@ function timerDiv() {
   inner.classList.add("inner");
   const number = document.createElement("p");
   number.classList.add("number");
-  // number.innerText = 60;
 
   const divSvg = document.querySelector(".svg");
   const secondi = (document.createElement("p").innerText = "Secondi");
@@ -205,13 +196,14 @@ function timerDiv() {
 
       numberEl.innerHTML = seconds;
       circleTimer.style.animation = "none";
-      void circleTimer.offsetWidth; // Trigger reflow
+      void circleTimer.offsetWidth;
 
       circleTimer.style.animation = null;
+      // Se il timer arriva a 0 passa alla prossima domanda, contala come risposta errata e resetta il timer
       if (seconds === 0) {
         clearInterval(interval);
-        selectAnswer(false); // Passa alla prossima domanda con risposta falsa
-        resetTimer(); // Resetta il timer
+        selectAnswer(false);
+        resetTimer(); //
 
         if (currentQuestionIndex < questions.length) {
           showQuestion(questions[currentQuestionIndex]);
@@ -221,7 +213,7 @@ function timerDiv() {
         }
       }
     }
-    // Aggiorna il timer ogni secondo
+
     const interval = setInterval(updateTimer, 1000);
   }
 
@@ -237,12 +229,12 @@ function timerDiv() {
 
 // Funzione per ripristinare il timer
 function resetTimer() {
-  seconds = 60; // Reimposta la variabile seconds a 60
+  seconds = 60;
   const number = document.querySelector(".number");
   number.innerText = seconds;
 
   const timerSvg = document.querySelector(".svgTimer");
-  const newTimerSvg = timerSvg.cloneNode(true); // Clona l'elemento SVG
+  const newTimerSvg = timerSvg.cloneNode(true);
 
   timerSvg.parentNode.replaceChild(newTimerSvg, timerSvg);
 }
@@ -251,12 +243,11 @@ function resetTimer() {
 
 // Indice della domanda corrente
 let currentQuestionIndex = 0;
-// Punteggio
 let score = 0;
 // Array di domande mescolato
 const randomQuestions = [...questions].sort(() => Math.random() - 0.5);
 
-// Funzione per avviare il quiz
+// FUNZIONE PER AVVIARE IL QUIZ
 function startQuiz() {
   showQuestion(randomQuestions[currentQuestionIndex]);
 }
@@ -266,20 +257,19 @@ function showQuestion(question) {
   const questionQuest = document.querySelector(".titleBenchmark");
   const answerButtons = document.getElementById("answer-buttons");
   const questionNumberContainer = document.querySelector("#questionNumber");
-  // Visualizza la domanda nell'elemento questionContainer
+
   questionQuest.innerText = question.question;
 
   // Svuota il div answerButtons delle risposte precedenti
   answerButtons.innerHTML = "";
 
-  // Crea un nuovo array con risposte corrette ed errate
+  // Crea un nuovo array con risposte corrette ed errate e lo mescoliamo con sort
   const allAnswers = question.incorrect_answers.concat([
     question.correct_answer,
   ]);
-  // Mescola l'array
   allAnswers.sort(() => Math.random() - 0.5);
 
-  // Aggiunge le risposte al div answerButtons
+  // cicliamo le domande corrette e sbaglaite e le inseriamo randomicamente nei button
   allAnswers.forEach((el) => {
     const button = document.createElement("button");
     button.classList.add("buttonBenchmark");
@@ -330,18 +320,13 @@ function selectAnswer(isCorrect) {
 
 // Funzione per terminare il quiz
 function endQuiz() {
-  // questionContainer.remove();
-  // answerButtons.remove();
   console.log(`Il tuo punteggio finale è: ${score}/${questions.length}`);
   risposteGiuste = score;
   risposteSbagliate = questions.length - score;
   console.log(risposteGiuste, risposteSbagliate);
 }
 
-// All'avvio della pagina, mostriamo il contenuto del primo template.
-showTemplate(templateIndex);
-
-// funzioni stelle
+// FUNZIONI PER IL RATING
 function starClick() {
   let star = document.querySelectorAll(".star");
   star.forEach((el, index) => {
@@ -376,3 +361,6 @@ function addMouseoverListeners() {
     el.addEventListener("mouseover", starHover);
   });
 }
+
+// All'avvio della pagina, mostriamo il contenuto del primo template e cosi via
+showTemplate(templateIndex);
