@@ -129,15 +129,14 @@ function showTemplate(templateIndex) {
   }
   // Selezioniamo i bottoni dopo aver aggiunto il template al container.
   const switchButtons = document.querySelectorAll(".switchButton");
-  // Aggiungiamo un event listener per l'evento "click" a ciascun pulsante.
+  // Aggiungiamo un event listener per l'evento a tuttii button.
   switchButtons.forEach((el) => {
     el.addEventListener("click", switchTemplate);
   });
 }
 
-// Funzione per passare al template successivo
+// FUNZIONE PER PASSARE AL TEMPLATE SUCCESSIVO CHE ANDRA' COLLEGATA ALL EVENTO DEI BOTTONI
 function switchTemplate() {
-  // templateIndex = templateIndex === 3 ? 1 : templateIndex + 1;
   if (
     templateIndex === 1 &&
     !document.querySelector("#templateCheckbox").checked
@@ -150,11 +149,9 @@ function switchTemplate() {
   }
   //   inserire la funzione per far partire i quiz
   showTemplate(templateIndex);
-
-  // Mostriamo il nuovo template.
 }
 
-// Funzione per mostrare il timer
+// FUNZIONE TIMER
 function timerDiv() {
   const timer = document.querySelector(".timer");
   timer.classList.add("timer");
