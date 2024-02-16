@@ -82,65 +82,62 @@ body {
 }
 
 .checkbox-wrapper {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    margin-top: 11px;
-    cursor: pointer;
-    font-size: 22px;
-    user-select: none; 
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin-top: 11px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
 }
 
 .checkbox-wrapper input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-    display: none;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  display: none;
 }
 
 .checkbox-wrapper .checkmark {
-    position: absolute;
-    top: 3px;
-    left: -22px;
-    height: 25px;
-    width: 25px;
-    background-color: transparent;
-    border: 3px solid white;
-    transform: translateY(0.4em);
-    display: block;
-    
+  position: absolute;
+  top: 3px;
+  left: -22px;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 3px solid white;
+  transform: translateY(0.4em);
+  display: block;
 }
 
-
 .checkbox-wrapper .checkmark::after {
-    content: "";
-    position: absolute;
-    left: 6px;
-    top: 2px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    display: none;
-    
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: none;
 }
 
 .checkbox-wrapper input:checked ~ .checkmark::after {
-    display: block;
+  display: block;
 }
 
-.visto{
-    margin-left: 3px;
-    margin-top: 10px;
+.visto {
+  margin-left: 3px;
+  margin-top: 10px;
 }
-#templateCheckbox{
-    visibility: hidden;
+#templateCheckbox {
+  visibility: hidden;
 }
 
 /*------WELCOME PAGE COMPLETE------*/
@@ -152,6 +149,7 @@ body {
 
 .titleBenchmark {
   font-family: "Outfit", sans-serif;
+  height: 230px;
   font-size: 60px;
 }
 
@@ -176,12 +174,12 @@ body {
   margin-left: 0em;
   border: 2px solid white;
   color: white;
-  font-family: "Inter", sans-serif;
-  font-weight: bold;
-
+  font-family: "Outfit", sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
   background-color: transparent;
-  padding-top: 2.6em;
-  padding-bottom: 2.6em;
+  padding-top: 2em;
+  padding-bottom: 2em;
   border-radius: 50px;
   cursor: pointer;
 }
@@ -318,178 +316,169 @@ body {
 }
 
 /*TIMER COMPLETE*/
-#title{
+#title {
+  font-family: "Outfit";
   margin-top: 1.8rem;
   text-align: center;
   color: #e7e7eb;
 }
 
-#title h2{
-  
+#title h2 {
   font-size: 4rem;
-  font-weight:700;
+  font-weight: 700;
 }
 
-
-#title h3{
+#title h3 {
   margin: 0.7rem;
   font-size: 1.8rem;
+  font-weight: 400;
 }
 
-/************************ MAIN ************************/ 
+/************************ MAIN ************************/
 
-
-#main{
+#main {
   margin-top: 3rem;
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
-
 }
 
-/************************ CORRECT/WRONG ************************/ 
+/************************ CORRECT/WRONG ************************/
 
-.container-correct{
+.container-correct {
   display: flex;
   flex-direction: row;
   justify-content: right;
   align-items: center;
   margin-right: 4rem;
-
+  padding-right: 80px;
 }
 
-
-.container-wrong{
+.container-wrong {
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
   margin-left: 4rem;
+  padding-left: 80px;
 }
 
-.item-correct-text{
+.item-correct-text {
   text-align: left;
-  
 }
 
-.item-wrong-text{
+.item-wrong-text {
   text-align: right;
-
 }
 
-
-.item-correct-text h3, .item-wrong-text h3{
-font-size: 4rem;  
-
+.item-correct-text h3,
+.item-wrong-text h3 {
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: "Outfit", sans-serif;
 }
 
-
-.item-correct-text h4, .item-wrong-text h4{
-  font-size: 4rem;   
-  font-weight:600;
-  font-family: "Rubik", sans-serif;
- }
-
-
-.item-correct-text #number-question-correct, .item-wrong-text #number-question-wrong{
-  font-size: 1.3rem;   
+.item-correct-text h4,
+.item-wrong-text h4 {
+  font-size: 4rem;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
 }
 
-/************************ CIRCLE ************************/ 
-
-
-.item-circle{
-
-text-align: center; 
-
-border-radius: 100%;
-
-
-
-
+.item-correct-text #number-question-correct,
+.item-wrong-text #number-question-wrong {
+  font-size: 1.3rem;
+  font-family: "Outfit";
 }
 
-.container-text{
-  
-display: flex;
-justify-content: center;
-align-items: center;
+/************************ CIRCLE ************************/
 
-margin: 0 auto;
-border: 50px solid #00ffff;
-border-radius: 100%;
+.item-circle {
+  text-align: center;
 
-height: 300px;
-width: 300px;
-
-box-shadow: rgba(17, 17, 26, 0.4) 0px 8px 24px, rgba(17, 17, 26, 0.4) 0px 16px 56px, rgba(17, 17, 26, 0.4) 0px 24px 80px;
-
+  border-radius: 100%;
 }
 
-.item-circle h6{
-font-size: 1rem;
-font-weight: bold;
-padding-top: 1rem;
+.container-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  border: 50px solid #00ffff;
+  border-radius: 100%;
+
+  height: 300px;
+  width: 300px;
+
+  box-shadow: rgba(17, 17, 26, 0.4) 0px 8px 24px,
+    rgba(17, 17, 26, 0.4) 0px 16px 56px, rgba(17, 17, 26, 0.4) 0px 24px 80px;
 }
 
-
-.item-circle h5{
-color: #00ffff;
-font-size: 1rem;
-font-weight: bold;
+.item-circle h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 1rem;
 }
 
-
-
-.item-circle p{
- font-size: 1rem;
- padding: 1.5rem 0.5rem;
+.item-circle h5 {
+  color: #00ffff;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-  .btnResult{
-    margin-top: 3.5rem;
-    text-align: center;
-  }
-  
-  
-  .btnResult button{
-    padding: 1rem 4rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    font-weight: bold;   
-    border: 3px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    background-color: transparent;   
-    color:#fff;
-    cursor: pointer;
-  }
-  
-  .btnResult button:hover {
-    box-shadow: rgba(170, 160, 192, 0.2) 0px 7px 29px 0px;
-  }
-   /* CIRCLE */
+.item-circle p {
+  font-size: 1rem;
+  padding: 1.5rem 0.5rem;
+}
 
-   .container-circle{
-    display: flex;
-    justify-content: center;
-    width: 350px;
-    height: 350px;
-  }
+.btnResult {
+  margin-top: 3.5rem;
+  text-align: center;
+}
 
-  .item-circle{
-    position: relative;
-    width: 350px;
-    height: 350px;
-  }
+.btnResult button {
+  padding: 1rem 4rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-weight: bold;
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
 
-  .text-circle{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-    display: flex;
-    flex-direction: column;
-  }
+.btnResult button:hover {
+  box-shadow: rgba(170, 160, 192, 0.2) 0px 7px 29px 0px;
+}
+/* CIRCLE */
+
+.container-circle {
+  display: flex;
+  justify-content: center;
+  width: 350px;
+  height: 350px;
+}
+
+.item-circle {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+.text-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  display: flex;
+  flex-direction: column;
+}
+.text-circle p {
+  font-weight: 300;
+  font-size: 15px;
+}
 /*----RESULT TERMINATO-----*/
 
 .content {
@@ -503,11 +492,11 @@ font-weight: bold;
   margin-top: 2em;
 }
 
-.paragraph-feedbackp{
-    text-align: center;
-    font-family: 'Outfit', sans-serif;
-    font-size: 30px;
-    line-height: 1.2em;
+.paragraph-feedbackp {
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 30px;
+  line-height: 1.2em;
 }
 
 .feedbackp {
@@ -516,13 +505,13 @@ font-weight: bold;
   font-size: 30px;
 }
 
-.star{
-    padding-left: 0.8em;
-    cursor: pointer;
-    opacity: 0.2;
+.star {
+  padding-left: 0.8em;
+  cursor: pointer;
+  opacity: 0.2;
 }
-.star.active{
-    opacity: 1;
+.star.active {
+  opacity: 1;
 }
 
 .rates {

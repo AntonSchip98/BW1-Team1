@@ -16,7 +16,7 @@ const questions = [
     type: "multiple",
     difficulty: "easy",
     question:
-      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+      "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
     correct_answer: "Final",
     incorrect_answers: ["Static", "Private", "Public"],
   },
@@ -101,6 +101,8 @@ const templateContainer = document.querySelector("#template-container");
 const questionContainer = document.getElementById("question-container");
 const answerButtons = document.getElementById("answer-buttons");
 
+let domandeGiuste = 0;
+let domandeSbaglaite = 0;
 // Funzioni
 let seconds = 61; // Spostiamo questa variabile all'interno della funzione
 // Funzione per mostrare il template
@@ -124,7 +126,7 @@ function showTemplate(templateIndex) {
     startQuiz();
   }
   if (templateIndex === 3) {
-    circle()
+    circle();
   }
   if (templateIndex === 4) {
     starClick();
@@ -220,7 +222,7 @@ function timerDiv() {
       }
     }
     // Aggiorna il timer ogni secondo
-    const interval = setInterval(updateTimer, 100);
+    const interval = setInterval(updateTimer, 1000);
   }
 
   timerFunction();
@@ -282,6 +284,7 @@ function showQuestion(question) {
     const button = document.createElement("button");
     button.classList.add("buttonBenchmark");
     button.innerText = el;
+
     button.addEventListener("click", () =>
       selectAnswer(el === question.correct_answer)
     );
@@ -330,6 +333,9 @@ function endQuiz() {
   // questionContainer.remove();
   // answerButtons.remove();
   console.log(`Il tuo punteggio finale è: ${score}/${questions.length}`);
+  risposteGiuste = score;
+  risposteSbagliate = questions.length - score;
+  console.log(risposteGiuste, risposteSbagliate);
 }
 
 // All'avvio della pagina, mostriamo il contenuto del primo template.
